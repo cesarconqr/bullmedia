@@ -1,0 +1,9 @@
+SPOT VIDEO
+
+https://pubads.g.doubleclick.net/gampad/ads?iu=/6881/televisa.bullmedia/spotvideo&description_url=https%3A%2F%2Fwww.bullmedia.mx&tfcd=0&npa=0&sz=640x360%7C640x480%7C854x480%7C1200x675%7C1280x720%7C1280x800%7C1920x1080&gdfp_req=1&unviewed_position_start=1&output=vast&env=vp&impl=s&correlator=&url=https%3A%2F%2Fwww.bullmedia.mx&ad_rule=0&vpmute=1&env=vp&gdfp_req=1&hl=es&output: xml_vmap1&plcmt=1&pp=TabletBitRates&sid=0&vpa=auto&vpi=1&vpos=preroll&wta=1
+
+
+
+TAKEOVER VIDEO
+
+https://pubads.g.doubleclick.net/gampad/ads?iu=/6881/televisa.bullmedia/takeovervideo&description_url=https%3A%2F%2Fwww.bullmedia.mx&tfcd=0&npa=0&sz=640x360%7C640x480%7C854x480%7C1200x675%7C1280x720%7C1280x800%7C1920x1080&gdfp_req=1&unviewed_position_start=1&output=vast&env=vp&impl=s&correlator=&url=https%3A%2F%2Fwww.bullmedia.mx&ad_rule=0&vpmute=1&env=vp&gdfp_req=1&hl=es&output: xml_vmap1&plcmt=1&pp=TabletBitRates&sid=0&vpa=auto&vpi=1&vpos=preroll&wta=1
