@@ -3,22 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Televisa IMA VAST Tag Takeover</title>
+    <title>Televisa IMA VASTtag Spot</title>
     <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
     <script>
         window.googletag = window.googletag || {cmd: []};
         googletag.cmd.push(function() {
-            googletag.defineSlot('/6881/televisa.bullmedia/takeovervideo', [[640, 360], [640, 480], [854, 480], [1200, 675], [1280, 720], [1280, 800], [1920, 1080]], 'div-gpt-ad-1720194651097-0').addService(googletag.pubads());
+            googletag.defineSlot('/6881/televisa.bullmedia/spotvideo', 
+                [
+                    [640, 360], [640, 480], [854, 480], [1200, 675], 
+                    [1280, 720], [1280, 800], [1920, 1080]  // Tamaños de anuncios
+                ], 
+                'div-gpt-ad-1720194651097-0')
+                .addService(googletag.pubads());
             googletag.pubads().enableSingleRequest();
             googletag.enableServices();
         });
     </script>
+    <style>
+        /* Estilo para el contenedor del anuncio */
+        #div-gpt-ad-1720194651097-0 {
+            width: 100%; /* Hace que el contenedor ocupe el 100% del ancho */
+            height: 0;   /* Inicialmente, la altura será 0, se ajustará dinámicamente */
+            padding-top: 56.25%; /* Relación de aspecto de 16:9 (para anuncios en formato video) */
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Asegurar que el contenido del anuncio se ajusta dentro del contenedor */
+        #div-gpt-ad-1720194651097-0 iframe, #div-gpt-ad-1720194651097-0 div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
-    <!-- /6881/televisa.bullmedia/takeovervideo -->
-    <div id='div-gpt-ad-1720194651097-0' style='min-width: 640px; min-height: 360px;'>
+    <!-- /6881/televisa.bullmedia/spotvideo -->
+    <div id="div-gpt-ad-1720194651097-0">
         <script>
-            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1720194651097-0'); });
+            googletag.cmd.push(function() { 
+                googletag.display('div-gpt-ad-1720194651097-0'); 
+            });
         </script>
     </div>
 </body>
