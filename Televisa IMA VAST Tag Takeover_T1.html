@@ -5,48 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Televisa IMA VASTtag Spot</title>
     <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
-    <script>
-        window.googletag = window.googletag || {cmd: []};
-        googletag.cmd.push(function() {
-            googletag.defineSlot('/6881/televisa.bullmedia/spotvideo', 
-                [
-                    [640, 360], [640, 480], [854, 480], [1200, 675], 
-                    [1280, 720], [1280, 800], [1920, 1080]  // Tamaños de anuncios
-                ], 
-                'div-gpt-ad-1720194651097-0')
-                .addService(googletag.pubads());
-            googletag.pubads().enableSingleRequest();
-            googletag.enableServices();
-        });
-    </script>
     <style>
-        /* Estilo para el contenedor del anuncio */
+        /* Contenedor del anuncio */
         #div-gpt-ad-1720194651097-0 {
-            width: 100%; /* Hace que el contenedor ocupe el 100% del ancho */
-            height: 0;   /* Inicialmente, la altura será 0, se ajustará dinámicamente */
-            padding-top: 56.25%; /* Relación de aspecto de 16:9 (para anuncios en formato video) */
+            width: 100%;
             position: relative;
             overflow: hidden;
         }
 
-        /* Asegurar que el contenido del anuncio se ajusta dentro del contenedor */
-        #div-gpt-ad-1720194651097-0 iframe, #div-gpt-ad-1720194651097-0 div {
+        /* Imagen de placeholder que cubre el contenedor */
+        .overlay {
+            background-image: url('https://ciprueba2.com/aura/bullmedia/Spot_Bull.jpg'); /* URL de la imagen de placeholder */
+            background-size: cover;
+            background-position: center;
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+            z-index: 1; /* Coloca la imagen por encima del contenido */
+        }
+
+        /* Contenido del anuncio */
+        .ad-content {
+            position: relative;
+            z-index: 2; /* El contenido del anuncio se mostrará sobre la imagen */
         }
     </style>
+    <script>
+        window.googletag = window.googletag || {cmd: []};
+        googletag.cmd.push(function() {
+            googletag.defineSlot('/6881/televisa.bullmedia/spotvideo', [
+                [640, 360], [640, 480], [854, 480], [1200, 675], [1280, 720], [1280, 800], [1920, 1080]
+            ], 'div-gpt-ad-1720194651097-0').addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
 </head>
 <body>
-    <!-- /6881/televisa.bullmedia/spotvideo -->
+    <!-- Contenedor del anuncio con la imagen de placeholder -->
     <div id="div-gpt-ad-1720194651097-0">
-        <script>
-            googletag.cmd.push(function() { 
-                googletag.display('div-gpt-ad-1720194651097-0'); 
-            });
-        </script>
+        <!-- Imagen de placeholder a pantalla completa -->
+        <div class="overlay"></div> 
+        <!-- Contenedor del contenido del anuncio -->
+        <div class="ad-content">
+            <script>
+                googletag.cmd.push(function() {
+                    googletag.display('div-gpt-ad-1720194651097-0'); // Mostrar el anuncio cuando esté listo
+                });
+            </script>
+        </div>
     </div>
 </body>
 </html>
