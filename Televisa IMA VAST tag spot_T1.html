@@ -5,30 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Televisa IMA VASTtag Spot</title>
     <style>
-        html, body {
+        body, html {
             margin: 0;
             padding: 0;
+            width: 100%;
             height: 100%;
             overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #000; /* Fondo negro */
         }
         #div-gpt-ad-1720194651097-0 {
-            width: 1280px;
-            height: 800px;
-            background-color: #000;
+            width: 100vw;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            background-color: #000; /* Fondo negro para resaltar el contenido */
         }
     </style>
     <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
     <script>
         window.googletag = window.googletag || {cmd: []};
         googletag.cmd.push(function() {
-            googletag.defineSlot('/6881/televisa.bullmedia/spotvideo', [1280, 800], 'div-gpt-ad-1720194651097-0').addService(googletag.pubads());
+            googletag.defineSlot('/6881/televisa.bullmedia/spotvideo', [[640, 360], [640, 480], [854, 480], [1200, 675], [1280, 720], [1280, 800], [1920, 1080]], 'div-gpt-ad-1720194651097-0')
+            .addService(googletag.pubads());
             googletag.pubads().enableSingleRequest();
             googletag.enableServices();
         });
