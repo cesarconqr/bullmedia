@@ -11,69 +11,53 @@
             width: 100%;
             height: 100%;
             display: flex;
+        }
+        #banner {
+            width: 300px; /* Ancho fijo del banner lateral */
+            height: 600px; /* Alto fijo */
+            background-color: #000; /* Fondo negro */
+            display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #f4f4f9;
         }
-        #banner-container {
-            width: 300px;
-            height: 700px;
-            position: relative;
+        #content {
+            flex-grow: 1; /* Ocupar el resto del espacio */
+            background-color: #f4f4f9; /* Fondo gris claro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        #backup-img {
+        #content img {
             width: 100%;
             height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1;
-        }
-        #adsense-banner {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 2;
-            display: none; /* Oculto inicialmente */
+            object-fit: cover; /* Ajustar imagen al espacio disponible */
         }
     </style>
     <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
     <script>
         window.googletag = window.googletag || {cmd: []};
-        googletag.cmd.push(function () {
-            googletag.defineSlot('/6881/televisa.bullmedia/bannerlateral', [[286, 509], [160, 600], [300, 600], [120, 600]], 'adsense-banner')
+        googletag.cmd.push(function() {
+            // Configuración del banner lateral (300x600)
+            googletag.defineSlot('/6881/televisa.bullmedia/bannerlateral', [[286, 509], [160, 600], [300, 600], [120, 600]], 'div-gpt-ad-1720194498876-0')
                 .addService(googletag.pubads());
             googletag.pubads().enableSingleRequest();
             googletag.enableServices();
         });
-
-        // Detecta cuando el anuncio se carga y oculta la imagen de respaldo
-        function checkAdsenseLoaded() {
-            const adSlot = document.getElementById('adsense-banner');
-            const observer = new MutationObserver(() => {
-                if (adSlot.children.length > 0) {
-                    document.getElementById('backup-img').style.display = 'none';
-                    adSlot.style.display = 'block';
-                }
-            });
-            observer.observe(adSlot, { childList: true });
-        }
-        window.onload = checkAdsenseLoaded;
     </script>
 </head>
 <body>
-    <div id="banner-container">
-        <!-- Imagen de respaldo -->
-        <img id="backup-img" src="https://tpc.googlesyndication.com/simgad/4087768288941948886" alt="Bullmedia Resource">
-
-        <!-- Contenedor del anuncio de AdSense -->
-        <div id="adsense-banner">
+    <!-- Banner lateral (300x600) -->
+    <div id="banner">
+        <div id="div-gpt-ad-1720194498876-0" style="width: 300px; height: 600px;">
             <script>
-                googletag.cmd.push(function () { googletag.display('adsense-banner'); });
+                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1720194498876-0'); });
             </script>
         </div>
     </div>
+
+    <!-- Contenido principal (imagen del recurso) -->
+    <div id="content">
+        <img src="https://tpc.googlesyndication.com/simgad/4087768288941948886" alt="Bullmedia Resource">
+    </div>
 </body>
 </html>
-
