@@ -21,6 +21,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            z-index: 10;
+        }
+        #takeover-resource {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://tpc.googlesyndication.com/simgad/4087768288941948886') no-repeat center center;
+            background-size: cover;
+            z-index: 5;
         }
     </style>
     <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
@@ -32,14 +44,32 @@
             googletag.pubads().enableSingleRequest();
             googletag.enableServices();
         });
+
+        function checkAdLoad() {
+            const adSlot = document.getElementById('div-gpt-ad-1725657264662-0');
+            const takeover = document.getElementById('takeover-resource');
+
+            setTimeout(() => {
+                // Si el slot del anuncio no tiene contenido, mostramos el recurso takeover.
+                if (adSlot.offsetHeight === 0 || adSlot.innerHTML.trim() === "") {
+                    takeover.style.display = 'block';
+                }
+            }, 3000); // Esperamos 3 segundos para confirmar la carga.
+        }
+
+        window.onload = checkAdLoad;
     </script>
 </head>
 <body>
-    <!-- /6881/televisa.bullmedia/takeover -->
+    <!-- Contenedor de la publicidad -->
     <div id="div-gpt-ad-1725657264662-0">
         <script>
             googletag.cmd.push(function() { googletag.display('div-gpt-ad-1725657264662-0'); });
         </script>
     </div>
+    
+    <!-- Recurso takeover -->
+    <div id="takeover-resource"></div>
 </body>
 </html>
+
